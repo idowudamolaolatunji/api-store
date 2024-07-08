@@ -1,0 +1,19 @@
+const mongoose = require('mongoose');
+const slugify = require('slugify');
+
+
+//////////////////////////////////////////////
+//// SCHEMA CONFIGURATION  ////
+//////////////////////////////////////////////
+const blogSchema = new mongoose.Schema({
+
+}, {
+    timestamps: true
+});
+
+
+//////////////////////////////////////////////
+//// MODEL AND COLLECTION ////
+//////////////////////////////////////////////
+const Blog = mongoose.model('Blog', blogSchema);
+module.exports = Blog;
