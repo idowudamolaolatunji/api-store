@@ -28,6 +28,11 @@ const productSchema = new mongoose.Schema({
         color: String,
         quantity: Number,
     }],
+    type: {
+        type: String,
+        enum: ["men", "women", "kids"],
+        default: "men"
+    },
     amountInStock: {
         type: Number,
         default: 1

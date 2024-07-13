@@ -166,12 +166,13 @@ exports.deleteProductCategoryById = async function(req, res) {
 //////////////////////////////////////////////
 exports.createProduct = async function(req, res) {
     try {
-        const { name, description, price, category, discountPercent, amountInStock, details } = req.body;
+        const { name, description, price, category, type, discountPercent, amountInStock, details } = req.body;
         const newProduct = await Product.create({
             name,
             description,
             price,
             category,
+            type,
             discountPercent,
             amountInStock,
             details
