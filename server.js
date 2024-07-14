@@ -12,7 +12,7 @@ dotenv.config({ path: './config.env' });
 //////////////////////////////////////////////
 //// DATABASE CONFIGURATION ////
 //////////////////////////////////////////////
-const PORT = process.env.PORT; 
+const PORT = process.env.PORT || 1000; 
 const DB = process.env.DATABASE.replace('<PASSWORD>', process.env.DATABASE_PASSWORD);
 
 async function connectDB() {
